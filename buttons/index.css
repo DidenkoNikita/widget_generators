@@ -1,0 +1,136 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: start;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4170ff;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  padding: 10px 22px;
+  max-width: 100%;
+}
+
+.collapse {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+}
+
+.collapse svg {
+  transition: transform 0.3s ease;
+}
+
+.collapse.rotated svg {
+  transform: rotate(180deg);
+}
+
+.title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-style: bold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.block {
+  width: 100%;
+  background: rgba(16, 22, 28, 0.5);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  padding: 19px 39px 48px 39px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 18px;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+  max-height: 1000px;
+}
+
+.block.collapsed {
+  max-height: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  gap: 0;
+}
+
+.subtitleWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.subtitle {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-style: SemiBold;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
+
+.buttonsWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow-x: auto;
+}
+
+.filterButton {
+  border: 0;
+  background: rgba(16, 22, 28, 0.5);
+  padding: 0;
+  cursor: pointer;
+  width: 156px;
+  height: 121px;
+  flex: 0 0 auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.buttonsWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.filterButton.active {
+  background: rgba(65, 112, 255, 1);
+}
+
+.filterButtonTitle {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  color: white;
+}
